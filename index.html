@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fire Emblem Damage Calculator</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body style="font-size: 12px; background-color: #1b1b1b;">
@@ -19,30 +20,24 @@
         <!-- ===================== ATTACKER SECTION ===================== -->
         <div class="attacker">
             <label for="attacker-select">Attacker</label>
-            <img src="Mae.png" alt="Character" class="framed-pic">
+            <img src="Mae.png" alt="Character" class="framed-pic attacker-img">
 
             <select id="attacker-select">
                 <option value="" disabled selected>Select Unit</option>
-                <option value="hero1" selected>Mae</option>
-                <option value="hero2">Hero 2</option>
             </select>
 
-            <label for="class-select">Class</label>
-            <select id="class-select">
-                <option value="" disabled selected>Select Class(es)</option>
-                <option value="class1">Class 1</option>
-                <option value="class2">Class 2</option>
+            <label for="class-select">Current Class</label>
+            <select id="attacker-class-select">
+                <option value="" disabled selected>Select Class</option>
             </select>
 
             <label for="item-select">Item</label>
-            <select id="item-select">
+            <select id="attacker-item-select">
                 <option value="" disabled selected>Select Item</option>
-                <option value="item1">Item 1</option>
-                <option value="item2">Item 2</option>
             </select>
 
             <label for="attack-select">Attack</label>
-            <select id="attack-select">
+            <select id="attacker-attack-select">
                 <option value="" disabled selected>Select Attack</option>
                 <option value="attack1">Attack 1</option>
                 <option value="attack2">Attack 2</option>
@@ -130,30 +125,24 @@
         <!-- ===================== DEFENDER SECTION ===================== -->
         <div class="defender">
             <label for="defender-select">Defender</label>
-            <img src="Boey.png" alt="Character" class="framed-pic">
+            <img src="Boey.png" alt="Character" class="framed-pic defender-img">
 
             <select id="defender-select">
                 <option value="" disabled selected>Select Unit</option>
-                <option value="hero1" selected>Boey</option>
-                <option value="hero2">Hero 2</option>
             </select>
 
-            <label for="def-class-select">Class</label>
-            <select id="def-class-select">
-                <option value="" disabled selected>Select Class(es)</option>
-                <option value="class1">Class 1</option>
-                <option value="class2">Class 2</option>
+            <label for="def-class-select">Current Class</label>
+            <select id="defender-class-select">
+                <option value="" disabled selected>Current Class</option>
             </select>
 
             <label for="def-item-select">Item</label>
-            <select id="def-item-select">
+            <select id="defender-item-select">
                 <option value="" disabled selected>Select Item</option>
-                <option value="item1">Item 1</option>
-                <option value="item2">Item 2</option>
             </select>
 
             <label for="def-attack-select">Attack</label>
-            <select id="def-attack-select">
+            <select id="defender-attack-select">
                 <option value="" disabled selected>Select Attack</option>
                 <option value="attack1">Attack 1</option>
                 <option value="attack2">Attack 2</option>
@@ -181,11 +170,13 @@
                         value="1">
                 </div>
             </div>
-
             <p>Skills are:</p>
         </div>
     </div>
 
+    <script src="chars.js"></script>
+    <script src="items.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
