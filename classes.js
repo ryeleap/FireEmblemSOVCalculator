@@ -119,7 +119,7 @@ const classes = {
     "Gold Knight": {
         weapon: "Lance",
         promotesFrom: "Paladin",
-        gender: "Male",
+        gender: "Both",
         skills: ["Horseback"]
     },
 

@@ -20,9 +20,23 @@ const characters = [
 
     // === Celica’s Army ===
     { name: "Celica", path: "Celica", recruited: true, img: "media/portraits/Celica.png", startingClass: "Priestess (Celica)", gender: "Female" },
-    { name: "Mae", path: "Celica", recruited: true, img: "media/portraits/Mae.png", startingClass: "Mage", gender: "Female" },
-    { name: "Boey", path: "Celica", recruited: true, img: "media/portraits/Boey.png", startingClass: "Mage", gender: "Male" },
-    { name: "Genny", path: "Celica", recruited: true, img: "media/portraits/Genny.png", startingClass: "Cleric", gender: "Female" },
+    {
+        name: "Mae", path: "Celica", recruited: true, img: "media/portraits/Mae.png", startingClass: "Mage", gender: "Female", spells: {
+            "Mage": ["Fire", "Thunder", "Ragnarok"],
+            "Priestess": ["Seraphim", "Recover"]
+        }
+    },
+    {
+        name: "Boey", path: "Celica", recruited: true, img: "media/portraits/Boey.png", startingClass: "Mage", gender: "Male", spells: {
+            "Mage": ["Fire", "Thunder", "Sagittae", "Excalibur"]
+        }
+    },
+    {
+        name: "Genny", path: "Celica", recruited: true, img: "media/portraits/Genny.png", startingClass: "Cleric", gender: "Female", spells: {
+            "Cleric": ["Nosferatu", "Expel"],
+            "Saint:": ["Seraphim"],
+        }
+    },
     { name: "Saber", path: "Celica", recruited: true, img: "media/portraits/Saber.png", startingClass: "Mercenary", gender: "Male" },
     { name: "Kamui", path: "Celica", recruited: true, img: "media/portraits/Kamui.png", startingClass: "Mercenary", gender: "Male" },
     { name: "Valbar", path: "Celica", recruited: true, img: "media/portraits/Valbar.png", startingClass: "Knight", gender: "Male" },

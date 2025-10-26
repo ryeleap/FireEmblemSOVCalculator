@@ -52,15 +52,15 @@ const weapons = [
     { name: "Longbow", type: "Bow", wt: 4, mt: 2, hit: 70, range: "2-4", worth: 50, effects: "Anti-Fliers", skills: ["Encloser"] },
     { name: "Python's Bow", type: "Bow", wt: 3, mt: 2, hit: 80, range: "2-3", worth: 10, effects: "Anti-Fliers", skills: ["Curved Shot", "Heavy Draw", "Encloser"] },
 
-    // --- BLACK MAGIC ---
-    { name: "Fire", type: "Black Magic", wt: 3, mt: 3, hit: 80, range: "1-2", worth: 0, effects: "HP Cost 1", skills: [] },
-    { name: "Thunder", type: "Black Magic", wt: 5, mt: 4, hit: 70, range: "1-3", worth: 0, effects: "HP Cost 2", skills: [] },
-    { name: "Excalibur", type: "Black Magic", wt: 1, mt: 5, hit: 95, range: "1-2", worth: 0, effects: "Crit +20, HP Cost 3", skills: [] },
-    { name: "Seraphim", type: "Black Magic", wt: 4, mt: 7, hit: 90, range: "1-2", worth: 0, effects: "Anti-Terrors, HP Cost 4", skills: [] },
-    { name: "Aura", type: "Black Magic", wt: 8, mt: 12, hit: 80, range: "1-2", worth: 0, effects: "HP Cost 6", skills: [] },
-    { name: "Sagittae", type: "Black Magic", wt: 11, mt: 16, hit: 70, range: "1-3", worth: 0, effects: "HP Cost 8", skills: [] },
-    { name: "Ragnarok", type: "Black Magic", wt: 14, mt: 20, hit: 95, range: "1-2", worth: 0, effects: "HP Cost 10", skills: [] },
-    { name: "Nosferatu", type: "White Magic", wt: 2, mt: 0, hit: 60, range: "1-2", worth: 0, effects: "Absorbs HP equal to damage", skills: [] },
+    // // --- BLACK MAGIC ---
+    // { name: "Fire", type: "Black Magic", wt: 3, mt: 3, hit: 80, range: "1-2", worth: 0, effects: "HP Cost 1", skills: [] },
+    // { name: "Thunder", type: "Black Magic", wt: 5, mt: 4, hit: 70, range: "1-3", worth: 0, effects: "HP Cost 2", skills: [] },
+    // { name: "Excalibur", type: "Black Magic", wt: 1, mt: 5, hit: 95, range: "1-2", worth: 0, effects: "Crit +20, HP Cost 3", skills: [] },
+    // { name: "Seraphim", type: "Black Magic", wt: 4, mt: 7, hit: 90, range: "1-2", worth: 0, effects: "Anti-Terrors, HP Cost 4", skills: [] },
+    // { name: "Aura", type: "Black Magic", wt: 8, mt: 12, hit: 80, range: "1-2", worth: 0, effects: "HP Cost 6", skills: [] },
+    // { name: "Sagittae", type: "Black Magic", wt: 11, mt: 16, hit: 70, range: "1-3", worth: 0, effects: "HP Cost 8", skills: [] },
+    // { name: "Ragnarok", type: "Black Magic", wt: 14, mt: 20, hit: 95, range: "1-2", worth: 0, effects: "HP Cost 10", skills: [] },
+    // { name: "Nosferatu", type: "White Magic", wt: 2, mt: 0, hit: 60, range: "1-2", worth: 0, effects: "Absorbs HP equal to damage", skills: [] },
 ];
 
 
