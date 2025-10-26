@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Emblem Damage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="font-size: 12px; background-color: #1b1b1b;">
+    <h1 style="color: white;">Fire Emblem Shadows of Valentia Damage Calculator</h1>
+    <hr style="border: 1px solid white;">
+
+    <p style="color: white;">Result text</p>
+
+    <div class="container">
+
+        <!-- ===================== ATTACKER SECTION ===================== -->
+        <div class="attacker">
+            <label for="attacker-select">Attacker</label>
+            <img src="Mae.png" alt="Character" class="framed-pic">
+
+            <select id="attacker-select">
+                <option value="" disabled selected>Select Unit</option>
+                <option value="hero1" selected>Mae</option>
+                <option value="hero2">Hero 2</option>
+            </select>
+
+            <label for="class-select">Class</label>
+            <select id="class-select">
+                <option value="" disabled selected>Select Class(es)</option>
+                <option value="class1">Class 1</option>
+                <option value="class2">Class 2</option>
+            </select>
+
+            <label for="item-select">Item</label>
+            <select id="item-select">
+                <option value="" disabled selected>Select Item</option>
+                <option value="item1">Item 1</option>
+                <option value="item2">Item 2</option>
+            </select>
+
+            <label for="attack-select">Attack</label>
+            <select id="attack-select">
+                <option value="" disabled selected>Select Attack</option>
+                <option value="attack1">Attack 1</option>
+                <option value="attack2">Attack 2</option>
+            </select>
+
+            <div class="stats">
+                <div class="stat-row"><label>HP</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+                <div class="stat-row"><label>Attack</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Defense</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Speed</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Luck</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+                <div class="stat-row"><label>Skill</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Res</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+                <div class="stat-row"><label>Move</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+            </div>
+
+            <p>Skills are:</p>
+        </div>
+
+        <!-- ===================== Field SECTION ===================== -->
+        <div class="field">
+            <h2 style="color: white;">Field</h2>
+
+            <label for="terrain-selects">Terrain</label>
+            <div class="terrain-selects">
+                <select id="attacker-terrain-select">
+                    <option value="" disabled selected>Select Terrain</option>
+                    <option value="plains" selected>Plains</option>
+                    <option value="forest">Forest</option>
+                    <option value="mountain">Mountain</option>
+                </select>
+                <select id="defender-terrain-select">
+                    <option value="" disabled selected>Select Terrain</option>
+                    <option value="plains" selected>Plains</option>
+                    <option value="forest">Forest</option>
+                    <option value="mountain">Mountain</option>
+                </select>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #555; width: 90%;">
+
+            <label for="crit-select">Critical Hit?</label>
+            <div class="crit-selects">
+                <button id="attacker-crit-button">Critical Hit</button>
+                <button id="defender-crit-button">Critical Hit</button>
+            </div>
+
+            <hr style="border: 0; height: 1px; background-color: #555; width: 90%;">
+
+            <label for="crit-select2">Critical Hit (2nd Hit)?</label>
+            <div class="crit-selects2">
+                <button id="attacker-crit2-button">Critical Hit 2</button>
+                <button id="defender-crit2-button">Critical Hit 2</button>
+            </div>
+
+            <hr style="border: 0; height: 1px; background-color: #555; width: 90%;">
+
+            <label for="buff-select">Any Buffs?</label>
+            <div class="buffs">
+                <button id="attacker-buffs">Warded?</button>
+                <button id="attacker-warded">Warded?</button>
+            </div>
+
+            <hr style="border: 0; height: 1px; background-color: #555; width: 90%;">
+
+
+            <!-- <div class="support-buffs">
+                <button id="atk-support-buffs">Temp</button>
+                <button id="def-support-buffs">Temp</button>
+            </div> -->
+
+        </div>
+
+        <!-- ===================== DEFENDER SECTION ===================== -->
+        <div class="defender">
+            <label for="defender-select">Defender</label>
+            <img src="Boey.png" alt="Character" class="framed-pic">
+
+            <select id="defender-select">
+                <option value="" disabled selected>Select Unit</option>
+                <option value="hero1" selected>Boey</option>
+                <option value="hero2">Hero 2</option>
+            </select>
+
+            <label for="def-class-select">Class</label>
+            <select id="def-class-select">
+                <option value="" disabled selected>Select Class(es)</option>
+                <option value="class1">Class 1</option>
+                <option value="class2">Class 2</option>
+            </select>
+
+            <label for="def-item-select">Item</label>
+            <select id="def-item-select">
+                <option value="" disabled selected>Select Item</option>
+                <option value="item1">Item 1</option>
+                <option value="item2">Item 2</option>
+            </select>
+
+            <label for="def-attack-select">Attack</label>
+            <select id="def-attack-select">
+                <option value="" disabled selected>Select Attack</option>
+                <option value="attack1">Attack 1</option>
+                <option value="attack2">Attack 2</option>
+            </select>
+
+            <div class="stats">
+                <div class="stat-row"><label>HP</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+                <div class="stat-row"><label>Attack</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Defense</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Speed</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Luck</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+                <div class="stat-row"><label>Skill</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1"></div>
+                <div class="stat-row"><label>Res</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+                <div class="stat-row"><label>Move</label><input type="number" class="inputStat" min="1" max="100"
+                        value="1">
+                </div>
+            </div>
+
+            <p>Skills are:</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
