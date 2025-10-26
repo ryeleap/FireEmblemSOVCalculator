@@ -1,0 +1,8 @@
+1. Implement Raw Damage Calculation
+2. Fully implement terrain, crits, evasion, crit evasion, etc
+3. Figure out how to display evasion chance etc
+4. Have the Damage Calculation be done for both sides (in sequential order)
+5. Implement Skills
+6. Add all enemy units
+7. Display results neatly
+8. Implement spells properly

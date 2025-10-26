@@ -2,7 +2,17 @@
 
 
 
-
+const none = [
+    {
+        name: "None",
+        def: 0,
+        res: 0,
+        wt: 0,
+        worth: 0,
+        effects: "None",
+        skills: []
+    },
+]
 
 // ===================== WEAPONS =====================
 const weapons = [

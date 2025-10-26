@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const allowedWeapons = classData.weapon.split(",").map(w => w.trim());
         const usableWeapons = weapons.filter(w => allowedWeapons.includes(w.type));
 
-        return [...usableWeapons, ...shields, ...rings];
+        return [...none, ...usableWeapons, ...shields, ...rings];
     }
 
     function updateItemOptions(className, selectEl) {
@@ -98,6 +98,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         return stats;
     }
+
+    function getAllSkills(className) {
+        const lineage = getClassLineage(className).reverse(); // base first
+        const allSkills = [];
+
+        for (const cls of lineage) {
+            const classData = classes[cls];
+            if (classData?.skills?.length) {
+                allSkills.push(...classData.skills);
+            }
+        }
+
+        return allSkills;
+    }
+
 
     attackerStatsDiv.addEventListener("input", () => {
         console.log("Attacker stats changed:", getStats(attackerStatsDiv));
@@ -132,6 +147,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function updateSkillsDisplay(className, containerEl) {
+        const skills = getAllSkills(className);
+        containerEl.innerHTML = ""; // clear old content
+
+        if (skills.length === 0) {
+            containerEl.textContent = "None";
+            return;
+        }
+
+        // Make it a comma-separated string for inline display
+        containerEl.textContent = skills.join(", ");
+    }
 
 
 
@@ -175,10 +202,12 @@ document.addEventListener("DOMContentLoaded", () => {
     attackerClassSelect.addEventListener("change", () => {
         const char = characters.find(c => c.name === attackerCharSelect.value);
         const chosenClass = attackerClassSelect.value;
+        const skills = getAllSkills(chosenClass);
+        console.log(`${chosenClass} skills:`, skills);
         if (!char) return;
-
         updateItemOptions(chosenClass, attackerItemSelect);
         updateAttackOptions(char, chosenClass, attackerAttackSelect);
+        updateSkillsDisplay(chosenClass, document.getElementById("attacker-skills"));
     });
 
     defenderClassSelect.addEventListener("change", () => {
@@ -188,12 +217,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updateItemOptions(chosenClass, defenderItemSelect);
         updateAttackOptions(char, chosenClass, defenderAttackSelect);
+        updateSkillsDisplay(chosenClass, document.getElementById("defender-skills"));
     });
 
 
     // === DATA POPULATION ===
     const allChars = [...characters];
-    const allItems = [...weapons, ...shields, ...rings];
+    const allItems = [...none, ...weapons, ...shields, ...rings];
     const allTerrains = terrainProperties.flatMap(t => t.terrains);
     const allClasses = Object.keys(classes);
 
@@ -270,4 +300,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (defenderChar) defenderImg.src = `media/portraits/${defenderChar.name}.png`;
 
     console.log("Characters:", allChars.length, "| Items:", allItems.length);
+
 });
