@@ -61,9 +61,6 @@
                 <div class="stat-row"><label>Res</label><input type="number" class="inputStat" min="1" max="100"
                         value="1">
                 </div>
-                <div class="stat-row"><label>Move</label><input type="number" class="inputStat" min="1" max="100"
-                        value="1">
-                </div>
             </div>
 
             <p>Skills are:</p>
@@ -77,15 +74,9 @@
             <div class="terrain-selects">
                 <select id="attacker-terrain-select">
                     <option value="" disabled selected>Select Terrain</option>
-                    <option value="plains" selected>Plains</option>
-                    <option value="forest">Forest</option>
-                    <option value="mountain">Mountain</option>
                 </select>
                 <select id="defender-terrain-select">
                     <option value="" disabled selected>Select Terrain</option>
-                    <option value="plains" selected>Plains</option>
-                    <option value="forest">Forest</option>
-                    <option value="mountain">Mountain</option>
                 </select>
             </div>
             <hr style="border: 0; height: 1px; background-color: #555; width: 90%;">
@@ -108,12 +99,16 @@
 
             <label for="buff-select">Any Buffs?</label>
             <div class="buffs">
-                <button id="attacker-buffs">Warded?</button>
-                <button id="attacker-warded">Warded?</button>
+                <button id="attacker-warded-button">Warded</button>
+                <button id="defender-warded-button">Warded</button>
             </div>
 
             <hr style="border: 0; height: 1px; background-color: #555; width: 90%;">
 
+            <label for="prev-classes-select">Previous Classes</label>
+            <div class="prev-classes">
+
+            </div>
 
             <!-- <div class="support-buffs">
                 <button id="atk-support-buffs">Temp</button>
@@ -166,9 +161,6 @@
                 <div class="stat-row"><label>Res</label><input type="number" class="inputStat" min="1" max="100"
                         value="1">
                 </div>
-                <div class="stat-row"><label>Move</label><input type="number" class="inputStat" min="1" max="100"
-                        value="1">
-                </div>
             </div>
             <p>Skills are:</p>
         </div>
@@ -177,6 +169,8 @@
     <script src="chars.js"></script>
     <script src="items.js"></script>
     <script src="script.js"></script>
+    <script src="field.js"></script>
+    <script src="classes.js"></script>
 </body>
 
 </html>

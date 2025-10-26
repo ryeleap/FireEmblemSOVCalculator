@@ -208,7 +208,7 @@ button {
     padding: 5px;
     font-size: 11px;
     cursor: pointer;
-    transition: all 0.15s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 button:hover {
@@ -248,4 +248,16 @@ button:hover {
     justify-content: center;
     align-items: stretch;
     gap: 30px;
+}
+
+button.active-blue {
+    background-color: #4fa3ff;
+    border-color: #4fa3ff;
+    color: #000;
+}
+
+button.active-red {
+    background-color: #ff5f5f;
+    border-color: #ff5f5f;
+    color: #000;
 }
