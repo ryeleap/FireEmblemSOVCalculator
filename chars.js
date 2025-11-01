@@ -19,7 +19,7 @@ const characters = [
     { name: "Mycen", path: "Alm", recruited: true, img: "media/portraits/Mycen.png", startingClass: "Gold Knight", gender: "Male" },
 
     // === Celica’s Army ===
-    { name: "Celica", path: "Celica", recruited: true, img: "media/portraits/Celica.png", startingClass: "Priestess (Celica)", gender: "Female" },
+    { name: "Celica", path: "Celica", recruited: true, img: "media/portraits/Celica.png", startingClass: "Priestess", gender: "Female" },
     {
         name: "Mae", path: "Celica", recruited: true, img: "media/portraits/Mae.png", startingClass: "Mage", gender: "Female", spells: {
             "Mage": ["Fire", "Thunder", "Ragnarok"],

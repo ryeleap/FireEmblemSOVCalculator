@@ -220,7 +220,8 @@ button:hover {
 
 #defender-crit-button:hover,
 #defender-crit2-button:hover,
-#defender-buffs:hover {
+#defender-warded-button:hover,
+#defender-in-range-button:hover {
     background-color: #ff5f5f;
     border-color: #ff5f5f;
     color: #000;
@@ -261,4 +262,9 @@ button.active-red {
     background-color: #ff5f5f;
     border-color: #ff5f5f;
     color: #000;
+}
+
+.prev-classes {
+    display: flex;
+    gap: 1rem;
 }

@@ -17,6 +17,7 @@
 
     <div class="container">
 
+
         <!-- ===================== ATTACKER SECTION ===================== -->
         <div class="attacker">
             <label for="attacker-select">Attacker</label>
@@ -63,7 +64,7 @@
                 </div>
             </div>
 
-            <p>Skills are:</p>
+            <p>Skills/Combat Arts are:</p>
             <div id="attacker-skills"></div>
         </div>
 
@@ -114,9 +115,16 @@
 
             <hr style="border: 0; height: 1px; background-color: #555; width: 90%;">
 
-            <label for="prev-classes-select">Previous Classes</label>
+            <label for="prev-classes">Previous Classes</label>
             <div class="prev-classes">
+                <div>
+                    <p id="attacker-class-lineage">Atk Class List Here</p>
+                </div>
+                <div>
+                    <p id="defender-class-lineage">Def Class List Here</p>
+                </div>
             </div>
+
 
             <!-- <div class="support-buffs">
                 <button id="atk-support-buffs">Temp</button>
@@ -170,16 +178,28 @@
                         value="1">
                 </div>
             </div>
-            <p>Skills are:</p>
+            <p>Skills/Combat Arts are:</p>
             <div id="defender-skills"></div>
         </div>
     </div>
 
+    <hr style="border: 1px solid #444; width: 90%; margin-top: 20px;">
+    <div id="result-box" style="color: white; text-align: center; font-size: 13px; margin-top: 10px;">
+        <button id="calculate-button">Calculate Combat</button>
+        <div id="combat-result" style="margin-top: 15px;"></div>
+    </div>
+
     <script src="chars.js"></script>
-    <script src="items.js"></script>
-    <script src="script.js"></script>
-    <script src="field.js"></script>
     <script src="classes.js"></script>
+    <script src="items.js"></script>
+    <script src="field.js"></script>
+    <script src="spells.js"></script>
+    <script src="skills.js"></script>
+    <script src="script.js"></script>
+    <script src="combat.js"></script>
+
+
+
 </body>
 
 </html>
